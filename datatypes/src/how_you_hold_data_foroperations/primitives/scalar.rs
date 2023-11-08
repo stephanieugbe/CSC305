@@ -22,7 +22,7 @@ pub fn charact() {
     println!("Character:");
     println!("char: {}", my_char);
 }
-fn main() {
+pub fn main() {
     // Integer addition
     println!("1 + 2 = {}", 1u32 + 2);
 
