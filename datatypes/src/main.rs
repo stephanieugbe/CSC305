@@ -12,6 +12,7 @@ fn main() {
     how_you_hold_data_foroperations::primitives::scalar::charact();
     how_you_hold_data_foroperations::derived::user_defined::run();
     how_you_hold_data_foroperations::derived::user_defined::run2();
+    how_you_hold_data_foroperations::derived::user_defined::run3();
 
 
 }

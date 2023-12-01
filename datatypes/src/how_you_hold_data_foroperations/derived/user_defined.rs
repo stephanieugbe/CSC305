@@ -137,7 +137,8 @@ impl Shape for Rect {
             width,
             name,
         }
-    }
+    }   
+
 
     fn area(&self) -> i32 {
         self.length * self.width
@@ -243,3 +244,110 @@ I need similar implementation for Circle and Triangle
 Besides Area, I need Perimeter and comparison on the basis of Perimeter
 In your submission, I need a comment against every line of code about what it is mearnt to achieve
  */
+
+//implementing partialord for triangle perimeter
+ impl PartialOrd for Triangle {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        self.perimeter().partial_cmp(&other.perimeter())
+    }
+}
+
+//implementing partialord for circle perimeter
+impl PartialOrd for Circle {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        self.perimeter().partial_cmp(&other.perimeter())
+    }
+}
+pub fn run3(){
+   //radius is 5.0
+    let circle = Circle::new(5.0);
+    
+    //circle 2 for comparison
+    let circle2 = Circle::new(4.7);
+
+    // triangle with values
+    let triangle = Triangle::new(5.4, 7.4, 3.6, 7.2);
+    let triangle2 = Triangle::new(1.4, 3.5, 7.3, 9.4);
+
+    //comparison 
+    let result1 = triangle.partial_cmp(&triangle2);
+    println!("Triangle comparison: {:?}", result1);
+
+    let result2 = circle.partial_cmp(&circle2);
+    println!("Circle comparison: {:?}", result2);
+
+    //printing area and perimeter
+    println!("Circle's Area is {} and Perimeter is {}", circle.area(), circle.perimeter());
+    println!("Triangle's Area is {} and Perimeter is {}", triangle.area(), triangle.perimeter());
+}
+
+
+    //A conversion implementation into String. Can be used to m
+     
+impl Into<String> for Rect {
+    fn into(self)-> String{
+        //Return a string template literal
+        format!("My name is {} and my area is {}", self.name, self.area())
+    }
+}
+
+//circle struct
+#[derive(PartialEq)]
+struct Circle{
+    radius: f32
+}
+
+
+//triangle struct
+#[derive(PartialEq)]
+struct Triangle{
+    height: f32,
+    base: f32,
+    sidea: f32,
+    sideb: f32,
+}
+
+
+impl Circle {
+//function to create a new circle
+    fn new(radius: f32) -> Self{
+        Circle {radius}
+    }
+
+//function to calculate perimeter
+    fn perimeter(&self) -> f32 {
+        2.0 * 3.1415926 * self.radius
+    }
+
+//function to calculate area
+    fn area(&self) -> f32 {
+        3.1415926 * self.radius * self.radius
+    }
+}
+
+
+impl Triangle {
+    //function to create a new triangle
+    fn new(height: f32, base: f32, sidea: f32, sideb: f32) -> Self {
+        Triangle {
+            height,
+            base,
+            sidea,
+            sideb,
+        }
+    }
+   
+//function to calculate perimeter
+    fn perimeter(&self) -> f32 {
+        self.base + self.sidea + self.sideb
+    }
+
+    
+//function to calculate area
+    fn area(&self) -> f32 {
+        (self.base * self.height) / 2.0
+    }
+}
+
+
+
