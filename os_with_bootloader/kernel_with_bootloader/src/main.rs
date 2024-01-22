@@ -35,17 +35,17 @@ fn my_entry_point(boot_info: &'static mut bootloader_api::BootInfo) -> ! {
 }
     // Print at specific coordinates
     steffprint!("Hello, world!");
-
+    steffprint!("Steffany is saying hello world gaiys!");
 
 
     frame_buffer_writer.steff_set_position(100, 200);
     // Print with dynamic cursor positioning
-    steffprint!("Testing testing {} and {}", 1, 4.0 / 2.0);
+    steffprint!("Testing testing {} and {}", 9, 7);
 
 
     frame_buffer_writer.steff_set_position(100, 100);
     // Print with dynamic cursor positioning
-    steffprint!("Testing testing {} and {}", 1, 4.0 / 2.0);
+    steffprint!("Testing testing {} and {}", 1, 8);
 
     loop {
         hlt(); //stop x86_64 from being unnecessarily busy while looping
