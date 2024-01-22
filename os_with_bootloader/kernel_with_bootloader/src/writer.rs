@@ -48,6 +48,12 @@ impl FrameBufferWriter {
         logger
     }
 
+    /// Sets the cursor position to the specified coordinates.
+    pub fn set_cursor_position(&mut self, x: usize, y: usize) {
+        self.x_pos = x;
+        self.y_pos = y;
+    }
+
     fn newline(&mut self) {
         self.y_pos += font_constants::CHAR_RASTER_HEIGHT.val() + LINE_SPACING;
         self.carriage_return()
@@ -123,6 +129,7 @@ impl FrameBufferWriter {
             .copy_from_slice(&color[..bytes_per_pixel]);
         let _ = unsafe { ptr::read_volatile(&self.framebuffer[byte_offset]) };
     }
+
 }
 
 unsafe impl Send for FrameBufferWriter {}
