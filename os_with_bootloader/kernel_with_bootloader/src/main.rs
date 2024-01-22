@@ -40,12 +40,12 @@ fn my_entry_point(boot_info: &'static mut bootloader_api::BootInfo) -> ! {
 
     frame_buffer_writer.steff_set_position(100, 200);
     // Print with dynamic cursor positioning
-    steffprint!("Testing testing {} and {}", 9, 7);
+    steffprint!("Testing testing {} and {}", 1, 2);
 
 
     frame_buffer_writer.steff_set_position(100, 100);
     // Print with dynamic cursor positioning
-    steffprint!("Testing testing {} and {}", 1, 8);
+    steffprint!("Testing testing {} and {}", 3, 4);
 
     loop {
         hlt(); //stop x86_64 from being unnecessarily busy while looping
