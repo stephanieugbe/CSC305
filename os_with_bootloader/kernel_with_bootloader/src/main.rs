@@ -38,12 +38,12 @@ fn my_entry_point(boot_info: &'static mut bootloader_api::BootInfo) -> ! {
 
 
 
-    frame_buffer_writer.set_cursor_position(100, 200);
+    frame_buffer_writer.steff_set_position(100, 200);
     // Print with dynamic cursor positioning
     steffprint!("Testing testing {} and {}", 1, 4.0 / 2.0);
 
 
-    frame_buffer_writer.set_cursor_position(100, 100);
+    frame_buffer_writer.steff_set_position(100, 100);
     // Print with dynamic cursor positioning
     steffprint!("Testing testing {} and {}", 1, 4.0 / 2.0);
 

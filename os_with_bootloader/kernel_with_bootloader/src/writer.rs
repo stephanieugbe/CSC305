@@ -49,7 +49,7 @@ impl FrameBufferWriter {
     }
 
     /// Sets the cursor position to the specified coordinates.
-    pub fn set_cursor_position(&mut self, x: usize, y: usize) {
+    pub fn steff_set_position(&mut self, x: usize, y: usize) {
         self.x_pos = x;
         self.y_pos = y;
     }
