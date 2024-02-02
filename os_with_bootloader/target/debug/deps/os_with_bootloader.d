@@ -4,5 +4,5 @@ C:\Users\Stephanie Ugbe\Documents\CSC305\os_with_bootloader\target\debug\deps\os
 
 src\main.rs:
 
-# env-dep:BIOS_PATH=C:\\Users\\Stephanie Ugbe\\Documents\\CSC305\\os_with_bootloader\\target\\debug\\build\\os_with_bootloader-3823726c1be88735\\out\\bios.img
-# env-dep:UEFI_PATH=C:\\Users\\Stephanie Ugbe\\Documents\\CSC305\\os_with_bootloader\\target\\debug\\build\\os_with_bootloader-3823726c1be88735\\out\\uefi.img
+# env-dep:BIOS_PATH=C:\\Users\\Stephanie Ugbe\\Documents\\CSC305\\os_with_bootloader\\target\\debug\\build\\os_with_bootloader-63c79fed73eacf9c\\out\\bios.img
+# env-dep:UEFI_PATH=C:\\Users\\Stephanie Ugbe\\Documents\\CSC305\\os_with_bootloader\\target\\debug\\build\\os_with_bootloader-63c79fed73eacf9c\\out\\uefi.img

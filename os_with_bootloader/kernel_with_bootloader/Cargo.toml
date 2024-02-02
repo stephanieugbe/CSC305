@@ -9,3 +9,6 @@ edition = "2021"
 bootloader_api = "0.11"
 x86_64 = "0.14"
 noto-sans-mono-bitmap = "0.2" #for our framebuffer writer
+lazy_static = {version = "1.4", features = ["spin_no_std"]}
+spin = "0.9"
+good_memory_allocator = "0.1"
